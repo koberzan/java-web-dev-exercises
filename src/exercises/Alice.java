@@ -10,8 +10,16 @@ public class Alice {
                 "pictures or conversation?'";
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter search term:");
-        String term = input.next();
+        System.out.println("Enter word to search for:");
+        String term = input.nextLine().toLowerCase();
+        //use space as a deliminator on the sentence and push each word to an array. Then use for loop
+        //to search for the word
+
+        if (sentence.contains(term) == true) {
+            System.out.println("Word was found");
+        } else {
+            System.out.println("Word was not found");
+        }
 
         System.out.println(sentence.contains("term"));
 
